@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DomainHub - Buy Domains at $16</title>
+  <title>DomainHub - Buy Domains</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    body { font-family: 'Segoe UI', system-ui, sans-serif; }
+    body { 
+      font-family: 'Segoe UI', system-ui, sans-serif; 
+      min-height: 100vh;
+    }
     .hero-bg {
       background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
     }
@@ -17,162 +20,157 @@
 
   <!-- Navbar -->
   <nav class="bg-white shadow-md sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
       <div class="flex items-center gap-3">
-        <i class="fas fa-globe text-3xl text-indigo-600"></i>
-        <h1 class="text-2xl font-bold text-gray-800">DomainHub</h1>
+        <i class="fas fa-globe text-4xl text-indigo-600"></i>
+        <h1 class="text-3xl font-bold text-gray-800">DomainHub</h1>
       </div>
-      <div class="hidden md:flex gap-8 text-gray-700">
-        <a href="#" class="hover:text-indigo-600 font-medium">Search</a>
-        <a href="#" class="hover:text-indigo-600 font-medium">Pricing</a>
-        <a href="#" class="hover:text-indigo-600 font-medium">Help</a>
-      </div>
-      <button class="bg-indigo-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-indigo-700">
+      <button class="bg-indigo-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-indigo-700">
         Sign In
       </button>
     </div>
   </nav>
 
   <!-- Hero -->
-  <div class="hero-bg text-white py-20">
+  <div class="hero-bg text-white py-24">
     <div class="max-w-4xl mx-auto text-center px-6">
-      <h2 class="text-5xl font-bold mb-4">Find Your Dream Domain</h2>
-      <p class="text-xl mb-10 text-indigo-100">Only $16 per year for most domains</p>
+      <h2 class="text-5xl md:text-6xl font-bold mb-6">Find Your Perfect Domain</h2>
+      <p class="text-2xl text-indigo-100 mb-10">Most domains just <span class="font-bold">$16/year</span></p>
       
-      <div class="max-w-2xl mx-auto">
-        <div class="bg-white rounded-3xl shadow-2xl p-2 flex">
+      <div class="max-w-3xl mx-auto">
+        <div class="bg-white rounded-3xl shadow-2xl p-3 flex flex-col md:flex-row gap-3">
           <input 
             id="domainInput"
             type="text" 
-            placeholder="yourdomain.com"
-            class="flex-1 px-8 py-6 text-gray-800 text-xl rounded-3xl focus:outline-none"
+            placeholder="wildrootsjunglesafarilodge.com"
+            class="flex-1 px-8 py-7 text-gray-800 text-2xl rounded-3xl focus:outline-none"
             onkeypress="if(event.key === 'Enter') checkDomain()">
           <button onclick="checkDomain()" 
-                  class="bg-indigo-600 hover:bg-indigo-700 text-white px-12 py-6 rounded-3xl font-semibold text-lg flex items-center gap-3">
-            <i class="fas fa-search"></i>
-            <span>Search</span>
+                  class="bg-indigo-600 hover:bg-indigo-700 text-white px-12 py-7 rounded-3xl font-semibold text-xl flex items-center justify-center gap-3 w-full md:w-auto">
+            <i class="fas fa-search"></i> Search
           </button>
         </div>
-        <p class="text-indigo-200 text-sm mt-4">.com .net .io .org .co • 500+ extensions</p>
       </div>
     </div>
   </div>
 
   <!-- Results -->
-  <div id="results" class="max-w-4xl mx-auto px-6 py-12 hidden">
+  <div id="results" class="max-w-7xl mx-auto px-6 py-12 hidden">
     <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
 
-      <!-- Searched Domain - Not Available -->
-      <div class="p-10 border-b flex flex-col md:flex-row items-center justify-between gap-8">
-        <div>
-          <div class="flex items-center gap-4">
-            <span id="searchedDomain" class="text-4xl font-bold text-gray-900"></span>
-            <span class="px-5 py-2 bg-red-100 text-red-700 text-sm font-bold rounded-2xl">NOT AVAILABLE</span>
-          </div>
-          <p class="text-gray-500 mt-3">This domain is already taken or listed as premium.</p>
-        </div>
-
-        <div class="text-center md:text-right">
-          <div class="text-5xl font-bold text-red-600" id="premiumPrice">$1,699</div>
-          <p class="text-gray-400 text-sm">Premium one-time price</p>
-          <button onclick="makeOffer()" 
-                  class="mt-6 bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-2xl font-semibold text-lg">
-            Make an Offer
-          </button>
-        </div>
+      <!-- Main Result -->
+      <div id="mainResult" class="p-12 border-b">
+        <!-- JS will fill -->
       </div>
 
-      <!-- Available Alternatives - All at $16 -->
-      <div class="p-10">
-        <h3 class="text-2xl font-semibold mb-8 flex items-center gap-3">
-          <i class="fas fa-check-circle text-green-500"></i>
-          Available Domains - Only $16/year
-        </h3>
-
+      <!-- Alternatives -->
+      <div class="p-12">
+        <h3 class="text-3xl font-semibold mb-8">Available Alternatives – Only $16/year</h3>
         <div id="suggestions" class="grid md:grid-cols-2 gap-6">
-          <!-- Filled by JavaScript -->
+          <!-- JS will fill -->
         </div>
       </div>
-    </div>
-
-    <div class="text-center mt-10 text-gray-500 text-sm">
-      All prices shown are for the first year. Renewal at same rate.
     </div>
   </div>
 
   <script>
-    const alternatives = [
-      { domain: "yourdomain.io", price: "$16" },
-      { domain: "yourdomain.net", price: "$16" },
-      { domain: "getyourdomain.com", price: "$16" },
-      { domain: "yourdomain.app", price: "$16" },
-      { domain: "yourdomain.co", price: "$16" },
-      { domain: "yourdomain.online", price: "$16" },
-      { domain: "myyourdomain.com", price: "$16" },
-      { domain: "yourdomainhub.com", price: "$16" }
-    ];
+    const specialDomain = "wildrootsjunglesafarilodge.com";
 
     function checkDomain() {
-      const input = document.getElementById('domainInput');
-      let domain = input.value.trim().toLowerCase();
-
-      if (!domain) {
-        alert("Please type a domain name to search!");
+      let input = document.getElementById('domainInput').value.trim().toLowerCase();
+      
+      if (!input) {
+        alert("Please enter a domain name!");
         return;
       }
+      if (!input.includes('.')) input += '.com';
 
-      if (!domain.includes('.')) {
-        domain += '.com';
-      }
-
-      // Show results section
       document.getElementById('results').classList.remove('hidden');
 
-      // Update searched domain
-      document.getElementById('searchedDomain').textContent = domain;
+      const main = document.getElementById('mainResult');
+      const suggestionsContainer = document.getElementById('suggestions');
+      suggestionsContainer.innerHTML = '';
 
-      // Random premium price (between $999 - $2999)
-      const premium = Math.floor(Math.random() * 2000) + 999;
-      document.getElementById('premiumPrice').textContent = '$' + premium;
+      if (input === specialDomain) {
+        // Special case for wildrootsjunglesafarilodge.com → Not Available but shows $16
+        main.innerHTML = `
+          <div class="flex flex-col lg:flex-row items-center justify-between gap-10">
+            <div class="flex-1">
+              <div class="flex items-center gap-5 flex-wrap">
+                <span class="text-4xl lg:text-5xl font-bold text-gray-900">${input}</span>
+                <span class="px-8 py-3 bg-red-100 text-red-700 text-lg font-bold rounded-3xl">NOT AVAILABLE</span>
+              </div>
+              <p class="text-gray-600 mt-6 text-lg">This domain is currently not available for standard registration.</p>
+            </div>
+            <div class="text-center lg:text-right">
+              <div class="text-6xl font-bold text-green-600">$16</div>
+              <p class="text-gray-500">Special Price</p>
+              <button onclick="makeOffer()" 
+                      class="mt-8 bg-red-600 hover:bg-red-700 text-white px-14 py-5 rounded-3xl font-semibold text-xl">
+                Make an Offer
+              </button>
+            </div>
+          </div>
+        `;
+      } else {
+        // All other domains → Normal Not Available with high premium price
+        const premiumPrice = Math.floor(Math.random() * 2200) + 1499;
+        main.innerHTML = `
+          <div class="flex flex-col lg:flex-row items-center justify-between gap-10">
+            <div class="flex-1">
+              <div class="flex items-center gap-5 flex-wrap">
+                <span class="text-4xl lg:text-5xl font-bold text-gray-900">${input}</span>
+                <span class="px-8 py-3 bg-red-100 text-red-700 text-lg font-bold rounded-3xl">NOT AVAILABLE</span>
+              </div>
+              <p class="text-gray-600 mt-6 text-lg">This domain is already registered or listed as premium.</p>
+            </div>
+            <div class="text-center lg:text-right">
+              <div class="text-6xl font-bold text-red-600">$${premiumPrice}</div>
+              <p class="text-gray-500">Premium one-time price</p>
+              <button onclick="makeOffer()" 
+                      class="mt-8 bg-red-600 hover:bg-red-700 text-white px-14 py-5 rounded-3xl font-semibold text-xl">
+                Make an Offer
+              </button>
+            </div>
+          </div>
+        `;
+      }
 
-      // Generate $16 alternatives
-      const container = document.getElementById('suggestions');
-      container.innerHTML = '';
+      // Always show $16 alternatives
+      const alts = [
+        "wildrootsjunglesafari.com", "junglesafarilodge.com", "wildrootslodge.com",
+        "junglesafarilodge.io", "wildrootsafaris.com", "nepaljunglelodge.com",
+        "wildrootssafari.com", "junglesafarinp.com"
+      ];
 
-      alternatives.forEach(item => {
+      alts.forEach(d => {
         const div = document.createElement('div');
-        div.className = "bg-gray-50 hover:bg-green-50 border border-gray-200 hover:border-green-400 p-6 rounded-3xl transition-all flex justify-between items-center group";
-        
+        div.className = "bg-gray-50 hover:bg-green-50 border border-gray-200 p-8 rounded-3xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 transition";
         div.innerHTML = `
           <div>
-            <div class="font-semibold text-2xl text-gray-800">${item.domain}</div>
-            <div class="text-green-600 font-medium text-sm mt-1">✓ Available Now</div>
+            <div class="text-2xl font-semibold">${d}</div>
+            <div class="text-green-600 mt-1">Available Now</div>
           </div>
           <div class="text-right">
-            <div class="text-3xl font-bold text-green-600">${item.price}</div>
-            <div class="text-xs text-gray-500">per year</div>
-            <button onclick="buyNow('${item.domain}')" 
-                    class="mt-4 bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-2xl text-sm font-semibold transition">
+            <div class="text-4xl font-bold text-green-600">$16</div>
+            <div class="text-sm text-gray-500">per year</div>
+            <button onclick="buyDomain('${d}')" 
+                    class="mt-6 bg-green-600 hover:bg-green-700 text-white px-10 py-4 rounded-3xl font-semibold w-full sm:w-auto">
               Buy Now
             </button>
           </div>
         `;
-        container.appendChild(div);
+        suggestionsContainer.appendChild(div);
       });
     }
 
-    function buyNow(domain) {
-      alert(`🎉 Success!\n\nYou have purchased:\n${domain}\n\nPrice: $16/year\n\nThank you for shopping at DomainHub!`);
+    function buyDomain(domain) {
+      alert(`🎉 Success!\n\nYou purchased: ${domain}\nPrice: $16/year\nThank you for choosing DomainHub!`);
     }
 
     function makeOffer() {
-      alert("Thank you for your interest!\nOur team will contact you shortly regarding this premium domain.");
+      alert("Thank you!\nOur team will contact you soon regarding this domain.");
     }
-
-    // Demo: Search with example when page loads (optional)
-    window.onload = () => {
-      console.log("%cDomainHub Ready - All available domains are $16/year", "color:#4f46e5; font-weight:bold");
-    };
   </script>
 </body>
 </html>
