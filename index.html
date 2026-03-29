@@ -2,554 +2,177 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>SEO Edge | Premium Website SEO Package</title>
-  <!-- Google Fonts & simple reset -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DomainHub - Buy Domains at $16</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(145deg, #f8faff 0%, #eef2fc 100%);
-      color: #1A2C3E;
-      line-height: 1.4;
-      padding: 2rem 1.5rem;
-    }
-
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-    }
-
-    /* header section */
-    .pricing-header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .badge {
-      display: inline-block;
-      background: rgba(0, 102, 204, 0.12);
-      backdrop-filter: blur(2px);
-      padding: 0.4rem 1rem;
-      border-radius: 40px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.3px;
-      color: #0066cc;
-      margin-bottom: 1.2rem;
-      border: 1px solid rgba(0,102,204,0.2);
-    }
-
-    h1 {
-      font-size: 2.6rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #13294b, #1e4a76);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      letter-spacing: -0.02em;
-      margin-bottom: 0.8rem;
-    }
-
-    .subhead {
-      font-size: 1.2rem;
-      color: #3a546d;
-      max-width: 620px;
-      margin: 0 auto;
-      font-weight: 400;
-    }
-
-    /* main price card — hero price */
-    .price-hero {
-      background: #ffffff;
-      border-radius: 48px;
-      box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.2), 0 2px 5px rgba(0,0,0,0.02);
-      padding: 2rem 2rem 2rem 2rem;
-      margin-bottom: 3rem;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      transition: all 0.2s ease;
-      border: 1px solid rgba(0,102,204,0.15);
-    }
-
-    .price-info {
-      flex: 2;
-    }
-
-    .price-tag {
-      font-size: 3.8rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      color: #0a2942;
-      line-height: 1;
-    }
-
-    .price-tag span {
-      font-size: 1.6rem;
-      font-weight: 600;
-      vertical-align: super;
-      margin-right: 4px;
-    }
-
-    .price-desc {
-      font-size: 1rem;
-      color: #4a627a;
-      margin-top: 0.6rem;
-      font-weight: 500;
-    }
-
-    .cta-button {
-      background: #0a2b42;
-      color: white;
-      border: none;
-      padding: 1rem 2.4rem;
-      border-radius: 60px;
-      font-weight: 700;
-      font-size: 1.1rem;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      box-shadow: 0 8px 18px rgba(0,40,70,0.2);
-      font-family: inherit;
-      background: linear-gradient(105deg, #0c2f4b, #0b3b5e);
-    }
-
-    .cta-button:hover {
-      transform: translateY(-3px);
-      background: linear-gradient(105deg, #0f3b5c, #0e446b);
-      box-shadow: 0 14px 24px rgba(0,0,0,0.15);
-    }
-
-    /* feature grid: list SEO services */
-    .services-title {
-      font-size: 1.9rem;
-      font-weight: 700;
-      margin: 2.5rem 0 1.5rem 0;
-      position: relative;
-      display: inline-block;
-    }
-    .services-title:after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      width: 70%;
-      height: 3px;
-      background: linear-gradient(90deg, #0f5b9c, #7ab3c8);
-      border-radius: 4px;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 1.8rem;
-      margin: 2rem 0 2rem 0;
-    }
-
-    .service-card {
-      background: white;
-      border-radius: 28px;
-      padding: 1.5rem 1.6rem;
-      transition: all 0.2s ease;
-      border: 1px solid #e2edf7;
-      box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.05);
-      backdrop-filter: blur(2px);
-    }
-
-    .service-card:hover {
-      transform: translateY(-5px);
-      border-color: #bdd4ec;
-      box-shadow: 0 20px 30px -12px rgba(0, 70, 100, 0.12);
-    }
-
-    .service-icon {
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
-      display: inline-block;
-      background: #eef4fc;
-      padding: 0.5rem;
-      border-radius: 20px;
-    }
-
-    .service-card h3 {
-      font-size: 1.45rem;
-      font-weight: 700;
-      margin-bottom: 0.8rem;
-      color: #102b3f;
-    }
-
-    .service-card p {
-      color: #446177;
-      font-size: 0.95rem;
-      line-height: 1.45;
-      margin-bottom: 1rem;
-    }
-
-    .feature-list {
-      list-style: none;
-      margin-top: 0.8rem;
-    }
-
-    .feature-list li {
-      padding: 0.35rem 0;
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      color: #2c4d6e;
-      font-weight: 500;
-    }
-
-    .feature-list li::before {
-      content: "✓";
-      color: #1c8b5c;
-      font-weight: 800;
-      font-size: 1rem;
-    }
-
-    /* bonus section & highlight */
-    .value-add {
-      background: linear-gradient(120deg, #eef3fc, #ffffff);
-      border-radius: 2rem;
-      padding: 1.8rem 2rem;
-      margin: 2rem 0 2.5rem;
-      border-left: 5px solid #0f5b9c;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .value-text {
-      font-weight: 600;
-      font-size: 1.1rem;
-    }
-    .value-highlight {
-      background: #0f2f44;
-      color: white;
-      padding: 0.5rem 1.2rem;
-      border-radius: 40px;
-      font-weight: 700;
-      font-size: 0.9rem;
-    }
-
-    /* table for deliverables snapshot */
-    .deliverables-table {
-      background: white;
-      border-radius: 28px;
-      overflow: hidden;
-      margin: 2rem 0 1rem;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.03);
-      border: 1px solid #e2edf7;
-    }
-
-    .table-header {
-      background: #f1f6fd;
-      padding: 1rem 1.8rem;
-      font-weight: 800;
-      font-size: 1.2rem;
-      border-bottom: 1px solid #dce8f2;
-    }
-
-    .table-row {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      border-bottom: 1px solid #ecf3f9;
-    }
-
-    .table-row:last-child {
-      border-bottom: none;
-    }
-
-    .table-cell {
-      padding: 1rem 1.8rem;
-      font-size: 0.95rem;
-    }
-
-    .table-cell:first-child {
-      font-weight: 700;
-      color: #1f4768;
-      background: #fafdff;
-    }
-
-    /* cta bottom */
-    .final-cta {
-      text-align: center;
-      margin: 3rem 0 2rem;
-    }
-
-    .final-cta .cta-button {
-      background: #0f3b5e;
-      padding: 1rem 3rem;
-      font-size: 1.2rem;
-    }
-
-    .small-note {
-      font-size: 0.8rem;
-      color: #6a7f99;
-      margin-top: 1rem;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 3.5rem;
-      font-size: 0.8rem;
-      color: #6c86a0;
-      border-top: 1px solid #dce5f0;
-      padding-top: 2rem;
-    }
-
-    @media (max-width: 680px) {
-      body {
-        padding: 1.2rem;
-      }
-      h1 {
-        font-size: 1.9rem;
-      }
-      .price-tag {
-        font-size: 2.6rem;
-      }
-      .price-hero {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.2rem;
-        padding: 1.6rem;
-      }
-      .cta-button {
-        width: 100%;
-        text-align: center;
-      }
-      .table-row {
-        grid-template-columns: 1fr;
-        gap: 0.2rem;
-        padding: 0.5rem 0;
-      }
-      .table-cell {
-        padding: 0.4rem 1.2rem;
-      }
-      .table-cell:first-child {
-        background: transparent;
-      }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; }
+    .hero-bg {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
     }
   </style>
 </head>
-<body>
-<div class="container">
-  <!-- header -->
-  <div class="pricing-header">
-    <div class="badge">🚀 Performance-driven SEO</div>
-    <h1>Rank higher. Convert better.</h1>
-    <div class="subhead">Complete website SEO solution — transparent pricing, measurable results.</div>
-  </div>
+<body class="bg-gray-50">
 
-  <!-- main price block: 16,000 -->
-  <div class="price-hero">
-    <div class="price-info">
-      <div class="price-tag">
-        <span>₹</span>16,000 <span style="font-size:1rem;">/ one-time setup + 3 months</span>
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <i class="fas fa-globe text-3xl text-indigo-600"></i>
+        <h1 class="text-2xl font-bold text-gray-800">DomainHub</h1>
       </div>
-      <div class="price-desc">
-        ✅ Full-site SEO audit · Strategy · On-page & off-page · Local & technical SEO
+      <div class="hidden md:flex gap-8 text-gray-700">
+        <a href="#" class="hover:text-indigo-600 font-medium">Search</a>
+        <a href="#" class="hover:text-indigo-600 font-medium">Pricing</a>
+        <a href="#" class="hover:text-indigo-600 font-medium">Help</a>
+      </div>
+      <button class="bg-indigo-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-indigo-700">
+        Sign In
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero-bg text-white py-20">
+    <div class="max-w-4xl mx-auto text-center px-6">
+      <h2 class="text-5xl font-bold mb-4">Find Your Dream Domain</h2>
+      <p class="text-xl mb-10 text-indigo-100">Only $16 per year for most domains</p>
+      
+      <div class="max-w-2xl mx-auto">
+        <div class="bg-white rounded-3xl shadow-2xl p-2 flex">
+          <input 
+            id="domainInput"
+            type="text" 
+            placeholder="yourdomain.com"
+            class="flex-1 px-8 py-6 text-gray-800 text-xl rounded-3xl focus:outline-none"
+            onkeypress="if(event.key === 'Enter') checkDomain()">
+          <button onclick="checkDomain()" 
+                  class="bg-indigo-600 hover:bg-indigo-700 text-white px-12 py-6 rounded-3xl font-semibold text-lg flex items-center gap-3">
+            <i class="fas fa-search"></i>
+            <span>Search</span>
+          </button>
+        </div>
+        <p class="text-indigo-200 text-sm mt-4">.com .net .io .org .co • 500+ extensions</p>
       </div>
     </div>
-    <button class="cta-button" id="mainCtaBtn">Get full proposal →</button>
   </div>
 
-  <!-- list SEO services in detail - core offerings -->
-  <div class="services-title">📋 What’s included in the ₹16,000 SEO package</div>
-  <div class="services-grid">
-    <!-- card 1 -->
-    <div class="service-card">
-      <div class="service-icon">🔍</div>
-      <h3>Technical SEO & Audit</h3>
-      <p>Deep crawl analysis, indexability, core web vitals, schema markup, XML sitemap, robots.txt, and site speed recommendations.</p>
-      <ul class="feature-list">
-        <li>Complete website audit report</li>
-        <li>Fix duplicate content & broken links</li>
-        <li>Mobile-first optimization</li>
-      </ul>
+  <!-- Results -->
+  <div id="results" class="max-w-4xl mx-auto px-6 py-12 hidden">
+    <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+
+      <!-- Searched Domain - Not Available -->
+      <div class="p-10 border-b flex flex-col md:flex-row items-center justify-between gap-8">
+        <div>
+          <div class="flex items-center gap-4">
+            <span id="searchedDomain" class="text-4xl font-bold text-gray-900"></span>
+            <span class="px-5 py-2 bg-red-100 text-red-700 text-sm font-bold rounded-2xl">NOT AVAILABLE</span>
+          </div>
+          <p class="text-gray-500 mt-3">This domain is already taken or listed as premium.</p>
+        </div>
+
+        <div class="text-center md:text-right">
+          <div class="text-5xl font-bold text-red-600" id="premiumPrice">$1,699</div>
+          <p class="text-gray-400 text-sm">Premium one-time price</p>
+          <button onclick="makeOffer()" 
+                  class="mt-6 bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-2xl font-semibold text-lg">
+            Make an Offer
+          </button>
+        </div>
+      </div>
+
+      <!-- Available Alternatives - All at $16 -->
+      <div class="p-10">
+        <h3 class="text-2xl font-semibold mb-8 flex items-center gap-3">
+          <i class="fas fa-check-circle text-green-500"></i>
+          Available Domains - Only $16/year
+        </h3>
+
+        <div id="suggestions" class="grid md:grid-cols-2 gap-6">
+          <!-- Filled by JavaScript -->
+        </div>
+      </div>
     </div>
-    <!-- card 2 -->
-    <div class="service-card">
-      <div class="service-icon">📝</div>
-      <h3>On-Page SEO</h3>
-      <p>Keyword research & mapping, meta tags, header structure, internal linking, content optimization for target keywords.</p>
-      <ul class="feature-list">
-        <li>30+ high-value keywords analysis</li>
-        <li>Optimize 20 core pages</li>
-        <li>SEO-friendly URL structure</li>
-      </ul>
-    </div>
-    <!-- card 3 -->
-    <div class="service-card">
-      <div class="service-icon">🌐</div>
-      <h3>Off-Page & Authority</h3>
-      <p>High-authority backlink strategy, local citations, brand mentions, and ethical link building to boost domain authority.</p>
-      <ul class="feature-list">
-        <li>Premium guest post outreach</li>
-        <li>Local business citations (10+ platforms)</li>
-        <li>Competitor backlink gap analysis</li>
-      </ul>
-    </div>
-    <!-- card 4 -->
-    <div class="service-card">
-      <div class="service-icon">📊</div>
-      <h3>Content Strategy</h3>
-      <p>Topic clusters, content calendar, blog optimization, and AI-assisted content briefs for high-intent keywords.</p>
-      <ul class="feature-list">
-        <li>5 pillar articles + cluster plan</li>
-        <li>Content refresh for existing pages</li>
-        <li>Keyword cannibalization fix</li>
-      </ul>
-    </div>
-    <!-- card 5 -->
-    <div class="service-card">
-      <div class="service-icon">📍</div>
-      <h3>Local SEO (if applicable)</h3>
-      <p>Google Business Profile optimization, local keyword targeting, review management, and local map pack improvements.</p>
-      <ul class="feature-list">
-        <li>GBP setup & optimization</li>
-        <li>Local schema markup</li>
-        <li>Neighborhood citations</li>
-      </ul>
-    </div>
-    <!-- card 6 -->
-    <div class="service-card">
-      <div class="service-icon">📈</div>
-      <h3>Reporting & Analytics</h3>
-      <p>Monthly performance dashboard, keyword ranking tracker, traffic insights, and actionable recommendations.</p>
-      <ul class="feature-list">
-        <li>Custom Google Looker Studio report</li>
-        <li>Weekly progress updates</li>
-        <li>ROI & conversion analysis</li>
-      </ul>
+
+    <div class="text-center mt-10 text-gray-500 text-sm">
+      All prices shown are for the first year. Renewal at same rate.
     </div>
   </div>
 
-  <!-- extra value add: Why choose this package -->
-  <div class="value-add">
-    <div class="value-text">✨ <strong>Bonus value</strong> — First 3 months of continuous monitoring, priority support, and 2 strategy calls included.</div>
-    <div class="value-highlight">Dedicated SEO manager</div>
-  </div>
+  <script>
+    const alternatives = [
+      { domain: "yourdomain.io", price: "$16" },
+      { domain: "yourdomain.net", price: "$16" },
+      { domain: "getyourdomain.com", price: "$16" },
+      { domain: "yourdomain.app", price: "$16" },
+      { domain: "yourdomain.co", price: "$16" },
+      { domain: "yourdomain.online", price: "$16" },
+      { domain: "myyourdomain.com", price: "$16" },
+      { domain: "yourdomainhub.com", price: "$16" }
+    ];
 
-  <!-- detailed deliverables table for transparency -->
-  <div class="deliverables-table">
-    <div class="table-header">📌 SEO package deliverables (₹16,000)</div>
-    <div class="table-row">
-      <div class="table-cell">Initial SEO Audit</div>
-      <div class="table-cell">Technical health check, on-page errors, backlink profile, and competitor review (PDF + presentation)</div>
-    </div>
-    <div class="table-row">
-      <div class="table-cell">Keyword Strategy</div>
-      <div class="table-cell">100+ seed keywords, prioritized list, search intent mapping, and target difficulty scoring</div>
-    </div>
-    <div class="table-row">
-      <div class="table-cell">On-Page Optimization</div>
-      <div class="table-cell">Meta tags, schema implementation, content improvements, internal linking structure overhaul</div>
-    </div>
-    <div class="table-row">
-      <div class="table-cell">Off-Page SEO</div>
-      <div class="table-cell">15+ high-quality backlinks (outreach based), 20+ citations, social signals and brand strengthening</div>
-    </div>
-    <div class="table-row">
-      <div class="table-cell">Reporting & Maintenance</div>
-      <div class="table-cell">Monthly ranking reports, traffic analytics, and 3 months of follow-up adjustments after launch</div>
-    </div>
-  </div>
+    function checkDomain() {
+      const input = document.getElementById('domainInput');
+      let domain = input.value.trim().toLowerCase();
 
-  <!-- why us / trust elements -->
-  <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between; margin: 2rem 0 1rem;">
-    <div style="display: flex; align-items: center; gap: 10px; background: white; border-radius: 50px; padding: 0.5rem 1.3rem;">
-      <span style="font-size:1.4rem;">⭐</span> <span>4.9/5 from 120+ clients</span>
-    </div>
-    <div style="display: flex; align-items: center; gap: 10px; background: white; border-radius: 50px; padding: 0.5rem 1.3rem;">
-      <span style="font-size:1.4rem;">📆</span> <span>6-month ROI guarantee*</span>
-    </div>
-    <div style="display: flex; align-items: center; gap: 10px; background: white; border-radius: 50px; padding: 0.5rem 1.3rem;">
-      <span style="font-size:1.4rem;">🔒</span> <span>No long-term lock-in</span>
-    </div>
-  </div>
+      if (!domain) {
+        alert("Please type a domain name to search!");
+        return;
+      }
 
-  <!-- final call to action -->
-  <div class="final-cta">
-    <button class="cta-button" id="bottomCtaBtn">Start your SEO journey — ₹16,000 only</button>
-    <div class="small-note">*Flexible payment options available. Custom enterprise packages also offered.</div>
-  </div>
+      if (!domain.includes('.')) {
+        domain += '.com';
+      }
 
-  <footer>
-    © 2025 SEO Edge — Transparent SEO pricing. Website optimization for sustainable growth.
-  </footer>
-</div>
+      // Show results section
+      document.getElementById('results').classList.remove('hidden');
 
-<!-- simple modal interaction to show price confirmation & details -->
-<div id="inquiryModal" style="display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5); backdrop-filter: blur(3px); justify-content: center; align-items: center; z-index: 1000; font-family: 'Inter', sans-serif;">
-  <div style="background: white; max-width: 460px; width: 90%; border-radius: 2rem; padding: 1.8rem; box-shadow: 0 30px 40px rgba(0,0,0,0.2); text-align: center;">
-    <div style="font-size: 2.5rem;">🚀</div>
-    <h3 style="font-size: 1.7rem; margin: 0.5rem 0;">SEO Package ₹16,000</h3>
-    <p style="margin: 1rem 0; color:#2c4f6e;">You're interested in the complete website SEO solution. Our team will reach out within 2 hours with a custom roadmap and timeline.</p>
-    <div style="background: #f4f9fe; padding: 1rem; border-radius: 1.2rem; margin: 1rem 0;">
-      ✅ Includes: Technical SEO, On-page, Off-page, Content, Reporting & 3 months support.
-    </div>
-    <button id="closeModalBtn" style="background: #0a2b42; color:white; border: none; padding: 0.7rem 1.8rem; border-radius: 2rem; font-weight: 600; margin-top: 0.5rem; cursor:pointer;">Got it, close</button>
-  </div>
-</div>
+      // Update searched domain
+      document.getElementById('searchedDomain').textContent = domain;
 
-<script>
-  // Modal handling to showcase price listing details (confirmation)
-  const modal = document.getElementById('inquiryModal');
-  const mainBtn = document.getElementById('mainCtaBtn');
-  const bottomBtn = document.getElementById('bottomCtaBtn');
-  const closeModal = document.getElementById('closeModalBtn');
+      // Random premium price (between $999 - $2999)
+      const premium = Math.floor(Math.random() * 2000) + 999;
+      document.getElementById('premiumPrice').textContent = '$' + premium;
 
-  function openModal() {
-    modal.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-  }
+      // Generate $16 alternatives
+      const container = document.getElementById('suggestions');
+      container.innerHTML = '';
 
-  function closeModalFunc() {
-    modal.style.display = 'none';
-    document.body.style.overflow = '';
-  }
-
-  if (mainBtn) mainBtn.addEventListener('click', openModal);
-  if (bottomBtn) bottomBtn.addEventListener('click', openModal);
-  if (closeModal) closeModal.addEventListener('click', closeModalFunc);
-
-  // clicking outside modal also closes
-  window.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      closeModalFunc();
+      alternatives.forEach(item => {
+        const div = document.createElement('div');
+        div.className = "bg-gray-50 hover:bg-green-50 border border-gray-200 hover:border-green-400 p-6 rounded-3xl transition-all flex justify-between items-center group";
+        
+        div.innerHTML = `
+          <div>
+            <div class="font-semibold text-2xl text-gray-800">${item.domain}</div>
+            <div class="text-green-600 font-medium text-sm mt-1">✓ Available Now</div>
+          </div>
+          <div class="text-right">
+            <div class="text-3xl font-bold text-green-600">${item.price}</div>
+            <div class="text-xs text-gray-500">per year</div>
+            <button onclick="buyNow('${item.domain}')" 
+                    class="mt-4 bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-2xl text-sm font-semibold transition">
+              Buy Now
+            </button>
+          </div>
+        `;
+        container.appendChild(div);
+      });
     }
-  });
 
-  // optional: Add smooth scroll for CTA
-  const ctaButtons = document.querySelectorAll('.cta-button');
-  ctaButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      if (btn.id !== 'mainCtaBtn' && btn.id !== 'bottomCtaBtn') return;
-      // modal opens already, we also track simple analytics behavior
-      console.log('User interested in ₹16,000 SEO package');
-    });
-  });
+    function buyNow(domain) {
+      alert(`🎉 Success!\n\nYou have purchased:\n${domain}\n\nPrice: $16/year\n\nThank you for shopping at DomainHub!`);
+    }
 
-  // small detail: price listing is clearly visible and interactive
-  // ensure the SEO price (16,000) is highlighted in multiple spots
-  const heroPriceSpan = document.querySelector('.price-tag');
-  if (heroPriceSpan) {
-    // just reinforcing visual but already done
-  }
+    function makeOffer() {
+      alert("Thank you for your interest!\nOur team will contact you shortly regarding this premium domain.");
+    }
 
-  // Additional dynamic highlight for any mobile or edge readability
-  const serviceCards = document.querySelectorAll('.service-card');
-  // no extra logic needed but ensures SEO price context
-</script>
+    // Demo: Search with example when page loads (optional)
+    window.onload = () => {
+      console.log("%cDomainHub Ready - All available domains are $16/year", "color:#4f46e5; font-weight:bold");
+    };
+  </script>
 </body>
 </html>
